@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Islamic Daily Hadiths or Verses</title>
+    <title>Noore Deen</title>
     <style>
         body {
             font-family: 'Times New Roman', Times, serif;
@@ -15,7 +15,7 @@
         .container {
             margin: 20px auto;
             padding: 20px;
-            border: 2px solid black;
+            border: 2px solid rgb(0, 117, 25);
             border-radius: 10px;
             max-width: 700px;
             background-color: #f9f9f9;
@@ -123,7 +123,7 @@
 
 <body>
     <div class="container">
-        <h1>Islamic Hadiths & Verses</h1>
+        <h1>Islamic Hadiths & Verses </h1>
         <div class="quote" id="quote">Click the button to get a Hadith or a Verse ⬇</div>
         <div class="urdu" id="urdu"></div>
         <div class="arabic" id="arabic"></div>
@@ -133,727 +133,343 @@
 
     <script>
         const quotes = [
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    },
-    {
-        "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
-        "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
-        "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
-        "explanation": "Empathy and sincerity toward others are pillars of true faith."
-    },
-    {
-        "english": "Be not sad, surely Allah is with us.",
-        "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
-        "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
-        "explanation": "Allah’s support brings solace even in hardship."
-    },
-    {
-        "english": "With hardship comes ease. — Quran 94:5",
-        "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
-        "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
-        "explanation": "Challenges always come with relief—so be patient."
-    },
-    {
-        "english": "Seek knowledge from cradle to grave.",
-        "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
-        "arabic": "اطلبوا العلم من المهد إلى اللحد",
-        "explanation": "Lifelong learning is encouraged in Islam."
-    },
-    {
-        "english": "Health and time: two blessings often wasted.",
-        "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
-        "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
-        "explanation": "Use your time and health wisely before they are gone."
-    }
-]
+            {
+                "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
+                "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
+                "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
+                "explanation": "Empathy and sincerity toward others are pillars of true faith."
+            },
+            {
+                "english": "Be not sad, surely Allah is with us.",
+                "urdu": "اداس نہ ہو، بے شک اللہ ہمارے ساتھ ہے۔",
+                "arabic": "فَلا تَحْزَنْ إِنَّ اللَّهَ مَعَنَا",
+                "explanation": "Allah’s support brings solace even in hardship."
+            },
+            {
+                "english": "With hardship comes ease. — Quran 94:5",
+                "urdu": "یقیناً ہر تنگی کے ساتھ آسانی ہے۔",
+                "arabic": "فَإِنَّ مَعَ الْعُسْرِ يُسْرًا",
+                "explanation": "Challenges always come with relief—so be patient."
+            },
+            {
+                "english": "Seek knowledge from cradle to grave.",
+                "urdu": "پیدائش سے لے کر موت تک علم حاصل کرو۔",
+                "arabic": "اطلبوا العلم من المهد إلى اللحد",
+                "explanation": "Lifelong learning is encouraged in Islam."
+            },
+            {
+                "english": "Health and time: two blessings often wasted.",
+                "urdu": "صحت اور وقت: دو ایسی نعمتیں جو اکثر ضائع ہو جاتی ہیں۔",
+                "arabic": "الصحة والوقت: نعمِتان يُتفَرد بهما الكثير",
+                "explanation": "Use your time and health wisely before they are gone."
+            },
+            {
+                "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
+                "urdu": "تم میں سے کوئی شخص کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
+                "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
+                "explanation": "Empathy and sincerity toward others are pillars of true faith."
+            },
+            {
+                "english": "Actions are judged by intentions.",
+                "urdu": "اعمال کا دارومدار نیتوں پر ہے۔",
+                "arabic": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ",
+                "explanation": "Every action's worth depends on its intention. Sincerity is the core of good deeds."
+            },
+            {
+                "english": "None of you truly believes until he wishes for his brother what he wishes for himself.",
+                "urdu": "تم میں سے کوئی کامل ایمان والا نہیں جب تک وہ اپنے بھائی کے لیے وہی نہ چاہے جو اپنے لیے چاہتا ہے۔",
+                "arabic": "لا يُؤْمِنُ أَحَدُكُمْ حَتَّى يُحِبَّ لِأَخِيهِ مَا يُحِبُّ لِنَفْسِهِ",
+                "explanation": "True faith requires empathy and goodwill toward others."
+            },
+            {
+                "english": "Whoever does not show mercy will not be shown mercy.",
+                "urdu": "جو رحم نہیں کرتا اس پر رحم نہیں کیا جائے گا۔",
+                "arabic": "مَنْ لاَ يَرْحَمْ لاَ يُرْحَمْ",
+                "explanation": "Mercy invites mercy; harshness closes the door to kindness from others and from Allah."
+            },
+            {
+                "english": "The most beloved deeds to Allah are those done consistently, even if they are small.",
+                "urdu": "اللہ کے نزدیک سب سے زیادہ پسندیدہ اعمال وہ ہیں جو مستقل ہوں چاہے وہ چھوٹے ہوں۔",
+                "arabic": "أَحَبُّ الأَعْمَالِ إِلَى اللَّهِ أَدْوَمُهَا وَإِنْ قَلَّ",
+                "explanation": "Consistency matters more than quantity in worship and good deeds."
+            },
+            {
+                "english": "A Muslim is one from whose tongue and hands other Muslims are safe.",
+                "urdu": "مسلمان وہ ہے جس کی زبان اور ہاتھ سے دوسرے مسلمان محفوظ رہیں۔",
+                "arabic": "المُسْلِمُ مَنْ سَلِمَ الْمُسْلِمُونَ مِنْ لِسَانِهِ وَيَدِهِ",
+                "explanation": "True Islam means not harming anyone physically or verbally."
+            },
+            {
+                "english": "The best among you are those who learn the Quran and teach it.",
+                "urdu": "تم میں بہترین وہ ہیں جو قرآن سیکھیں اور اسے سکھائیں۔",
+                "arabic": "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",
+                "explanation": "Teaching and spreading Quranic knowledge earns the highest virtue."
+            },
+            {
+                "english": "Paradise lies under the feet of the mother.",
+                "urdu": "جنت ماں کے قدموں کے نیچے ہے۔",
+                "arabic": "الجَنّةُ تَحْتَ أَقْدَامِ الأُمَّهَاتِ",
+                "explanation": "Serving and honoring one’s mother is a gateway to Paradise."
+            },
+            {
+                "english": "Seek knowledge even if it is in China.",
+                "urdu": "علم حاصل کرو چاہے وہ چین میں ہی کیوں نہ ہو۔",
+                "arabic": "اطْلُبُوا الْعِلْمَ وَلَوْ فِي الصِّينِ",
+                "explanation": "The pursuit of knowledge is mandatory, no matter how far you must travel."
+            },
+            {
+                "english": "There is no harm nor reciprocating harm.",
+                "urdu": "نہ نقصان اور نہ نقصان کا بدلہ۔",
+                "arabic": "لاَ ضَرَرَ وَلاَ ضِرَارَ",
+                "explanation": "Islamic law prohibits causing harm or retaliating with harm."
+            },
+            {
+                "english": "Smiling in the face of your brother is charity.",
+                "urdu": "اپنے بھائی کے چہرے پر مسکراہٹ کرنا صدقہ ہے۔",
+                "arabic": "تَبَسُّمُكَ فِي وَجْهِ أَخِيكَ صَدَقَةٌ",
+                "explanation": "Even small acts of kindness, like a smile, are considered charity."
+            },
+            {
+                "english": "The strong man is not the one who overcomes others by strength, but the one who controls himself when angry.",
+                "urdu": "طاقتور وہ نہیں جو دوسروں کو زمین پر گرا دے، بلکہ وہ ہے جو غصے کے وقت خود پر قابو پائے۔",
+                "arabic": "لَيْسَ الشَّدِيدُ بِالصُّرَعَةِ، إِنَّمَا الشَّدِيدُ الَّذِي يَمْلِكُ نَفْسَهُ عِندَ الْغَضَبِ",
+                "explanation": "Real strength lies in self-control and emotional discipline, not physical dominance."
+            },
+            {
+                "english": "Modesty is a branch of faith.",
+                "urdu": "حیا ایمان کی ایک شاخ ہے۔",
+                "arabic": "الْحَيَاءُ شُعْبَةٌ مِّنَ الْإِيمَانِ",
+                "explanation": "Modesty and decency are fundamental qualities of a true believer."
+            },
+            {
+                "english": "A believer is not a fault-finder.",
+                "urdu": "مومن عیب تلاش کرنے والا نہیں ہوتا۔",
+                "arabic": "إِنَّ الْمُؤْمِنَ لَيْسَ بِاللَّعَّانِ وَلَا الطَّعَّانِ وَلَا الْفَاحِشِ وَلَا الْبَذِيءِ",
+                "explanation": "True believers avoid abusive language and fault-finding in others."
+            },
+            {
+                "english": "Whoever believes in Allah and the Last Day, let him speak good or remain silent.",
+                "urdu": "جو اللہ اور آخرت پر ایمان رکھتا ہے وہ بھلا بولے یا خاموش رہے۔",
+                "arabic": "مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيَقُلْ خَيْرًا أَوْ لِيَصْمُتْ",
+                "explanation": "Silence is better than harmful speech; words should benefit others or be withheld."
+            },
+            {
+                "english": "Do not envy one another and do not hate one another.",
+                "urdu": "ایک دوسرے سے حسد نہ کرو اور نفرت نہ رکھو۔",
+                "arabic": "لَا تَحَاسَدُوا وَلَا تَبَاغَضُوا",
+                "explanation": "Envy and hatred destroy unity and love among believers."
+            },
+            {
+                "english": "He is not a believer whose stomach is filled while his neighbor goes hungry.",
+                "urdu": "وہ شخص مومن نہیں جس کا پیٹ بھرا ہو اور اس کا پڑوسی بھوکا ہو۔",
+                "arabic": "مَا آمَنَ بِي مَنْ بَاتَ شَبْعَانَ وَجَارُهُ جَائِعٌ",
+                "explanation": "True faith requires care and responsibility toward neighbors."
+            },
+            {
+                "english": "The most perfect believer in faith is the one with the best character.",
+                "urdu": "ایمان میں سب سے کامل وہ ہے جس کا اخلاق سب سے اچھا ہے۔",
+                "arabic": "أَكْمَلُ الْمُؤْمِنِينَ إِيمَانًا أَحْسَنُهُمْ خُلُقًا",
+                "explanation": "Good character is the highest form of faith."
+            },
+            {
+                "english": "He who does not thank people does not thank Allah.",
+                "urdu": "جو لوگوں کا شکر ادا نہیں کرتا وہ اللہ کا بھی شکر ادا نہیں کرتا۔",
+                "arabic": "مَنْ لَا يَشْكُرِ النَّاسَ لَا يَشْكُرِ اللَّهَ",
+                "explanation": "Gratitude to people is a sign of gratitude to the Creator."
+            },
+            {
+                "english": "The upper hand is better than the lower hand.",
+                "urdu": "اوپر والا ہاتھ نیچے والے ہاتھ سے بہتر ہے۔",
+                "arabic": "الْيَدُ الْعُلْيَا خَيْرٌ مِنَ الْيَدِ السُّفْلَى",
+                "explanation": "Giving charity (upper hand) is better than asking or begging (lower hand)."
+            },
+            {
+                "english": "Religion is easy, and no one makes it hard except that it overwhelms him.",
+                "urdu": "دین آسان ہے اور جو اسے سخت کرے گا وہ مغلوب ہو جائے گا۔",
+                "arabic": "إِنَّ الدِّينَ يُسْرٌ وَلَنْ يُشَادَّ الدِّينَ أَحَدٌ إِلَّا غَلَبَهُ",
+                "explanation": "Islam promotes balance and ease; extremism leads to failure."
+            },
+  {
+    "english": "Do not belittle any good deed, even meeting your brother with a cheerful face.",
+    "urdu": "کسی نیک کام کو حقیر نہ سمجھو، چاہے اپنے بھائی سے خوش اخلاقی سے ملنا ہی کیوں نہ ہو۔",
+    "arabic": "لَا تَحْقِرَنَّ مِنَ الْمَعْرُوفِ شَيْئًا وَلَوْ أَنْ تَلْقَى أَخَاكَ بِوَجْهٍ طَلْقٍ",
+    "explanation": "Even small acts of kindness carry great value in Islam."
+  },
+  {
+    "english": "Do not get angry.",
+    "urdu": "غصہ نہ کرو۔",
+    "arabic": "لَا تَغْضَبْ",
+    "explanation": "Controlling anger is essential for peace and good character."
+  },
+  {
+    "english": "The world is the prison of the believer and the paradise of the disbeliever.",
+    "urdu": "دنیا مومن کے لیے قید خانہ ہے اور کافر کے لیے جنت ہے۔",
+    "arabic": "الدُّنْيَا سِجْنُ الْمُؤْمِنِ وَجَنَّةُ الْكَافِرِ",
+    "explanation": "Believers endure trials here for eternal reward; disbelievers enjoy temporary ease."
+  },
+  {
+    "english": "Wealth does not decrease by charity.",
+    "urdu": "صدقہ دینے سے مال کم نہیں ہوتا۔",
+    "arabic": "مَا نَقَصَتْ صَدَقَةٌ مِنْ مَالٍ",
+    "explanation": "Charity brings blessings and increases wealth spiritually."
+  },
+  {
+    "english": "Avoid suspicion, for suspicion is the worst of false tales.",
+    "urdu": "بدگمانی سے بچو کیونکہ بدگمانی سب سے بڑا جھوٹ ہے۔",
+    "arabic": "إِيَّاكُمْ وَالظَّنَّ، فَإِنَّ الظَّنَّ أَكْذَبُ الْحَدِيثِ",
+    "explanation": "Negative assumptions lead to harm and mistrust among people."
+  },
+  {
+    "english": "Do not laugh too much, for much laughter kills the heart.",
+    "urdu": "زیادہ نہ ہنسو کیونکہ زیادہ ہنسنا دل کو مردہ کر دیتا ہے۔",
+    "arabic": "لَا تُكْثِرُوا الضَّحِكَ فَإِنَّ كَثْرَةَ الضَّحِكِ تُـمِيتُ الْقَلْبَ",
+    "explanation": "Excessive laughter leads to heedlessness and weakens spirituality."
+  },
+  {
+    "english": "Help your brother, whether he is an oppressor or oppressed.",
+    "urdu": "اپنے بھائی کی مدد کرو چاہے وہ ظالم ہو یا مظلوم۔",
+    "arabic": "انْصُرْ أَخَاكَ ظَالِمًا أَوْ مَظْلُومًا",
+    "explanation": "Helping means stopping him from oppression and supporting the oppressed."
+  },
+  {
+    "english": "Cleanliness is half of faith.",
+    "urdu": "صفائی نصف ایمان ہے۔",
+    "arabic": "الطُّهُورُ شَطْرُ الْإِيمَانِ",
+    "explanation": "Purity in body and soul is a major part of faith."
+  },
+  {
+    "english": "A sign of a man’s excellence in his religion is leaving what does not concern him.",
+    "urdu": "آدمی کے دین کی خوبی یہ ہے کہ وہ فضول چیزوں کو چھوڑ دے۔",
+    "arabic": "مِنْ حُسْنِ إِسْلَامِ الْمَرْءِ تَرْكُهُ مَا لَا يَعْنِيهِ",
+    "explanation": "Avoiding unnecessary matters keeps life focused and peaceful."
+  },
+  {
+    "english": "Pay the worker his wages before his sweat dries.",
+    "urdu": "مزدور کی اجرت اس کا پسینہ خشک ہونے سے پہلے دو۔",
+    "arabic": "أَعْطُوا الْأَجِيرَ أَجْرَهُ قَبْلَ أَنْ يَجِفَّ عَرَقُهُ",
+    "explanation": "Islam commands fairness and promptness in financial dealings."
+  },
+  {
+    "english": "A good word is charity.",
+    "urdu": "اچھی بات کرنا بھی صدقہ ہے۔",
+    "arabic": "وَالْكَلِمَةُ الطَّيِّبَةُ صَدَقَةٌ",
+    "explanation": "Speaking kindly to others is an act of charity in Islam."
+  },
+  {
+    "english": "The best among you are those who are best to their wives.",
+    "urdu": "تم میں سب سے بہتر وہ ہے جو اپنی بیوی کے ساتھ بہتر سلوک کرے۔",
+    "arabic": "خَيْرُكُمْ خَيْرُكُمْ لِأَهْلِهِ",
+    "explanation": "Good treatment of family is a mark of a believer’s character."
+  },
+  {
+    "english": "Make things easy and do not make them difficult.",
+    "urdu": "لوگوں کے لیے آسانی پیدا کرو اور سختی نہ کرو۔",
+    "arabic": "يَسِّرُوا وَلَا تُعَسِّرُوا",
+    "explanation": "Islam encourages making life easier for others."
+  },
+  {
+    "english": "Smiling at your brother is charity.",
+    "urdu": "اپنے بھائی کو مسکرا کر دیکھنا بھی صدقہ ہے۔",
+    "arabic": "تَبَسُّمُكَ فِي وَجْهِ أَخِيكَ لَكَ صَدَقَةٌ",
+    "explanation": "Even a simple smile counts as a good deed."
+  },
+  {
+    "english": "Whoever believes in Allah and the Last Day should honor his guest.",
+    "urdu": "جو اللہ اور آخرت پر ایمان رکھتا ہے وہ اپنے مہمان کی عزت کرے۔",
+    "arabic": "مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيُكْرِمْ ضَيْفَهُ",
+    "explanation": "Hospitality is a key sign of faith."
+  },
+  {
+    "english": "The most beloved deed to Allah is the most regular and constant even if it were little.",
+    "urdu": "اللہ کے نزدیک سب سے پسندیدہ عمل وہ ہے جو پابندی سے کیا جائے اگرچہ وہ تھوڑا ہو۔",
+    "arabic": "أَحَبُّ الْأَعْمَالِ إِلَى اللَّهِ أَدْوَمُهَا وَإِنْ قَلَّ",
+    "explanation": "Consistency in good deeds matters more than their size."
+  },
+  {
+    "english": "Whoever guides someone to goodness will have a reward like one who did it.",
+    "urdu": "جو کسی کو نیکی کی طرف رہنمائی کرے گا اسے اس کے برابر اجر ملے گا۔",
+    "arabic": "مَنْ دَلَّ عَلَى خَيْرٍ فَلَهُ مِثْلُ أَجْرِ فَاعِلِهِ",
+    "explanation": "Encouraging good deeds is as rewarding as doing them."
+  },
+  {
+    "english": "A believer is a mirror to his brother.",
+    "urdu": "مومن اپنے بھائی کے لیے آئینہ ہے۔",
+    "arabic": "الْمُؤْمِنُ مِرْآةُ الْمُؤْمِنِ",
+    "explanation": "Believers should reflect honesty and give sincere advice to each other."
+  },
+  {
+    "english": "Whoever does not show mercy to others will not be shown mercy.",
+    "urdu": "جو دوسروں پر رحم نہیں کرتا اس پر رحم نہیں کیا جائے گا۔",
+    "arabic": "مَنْ لَا يَرْحَمْ لَا يُرْحَمْ",
+    "explanation": "Compassion is a prerequisite for receiving mercy from Allah."
+  },
+  {
+    "english": "The most hated of men to Allah is the one who is most quarrelsome.",
+    "urdu": "اللہ کے نزدیک سب سے ناپسندیدہ شخص وہ ہے جو سب سے زیادہ جھگڑالو ہو۔",
+    "arabic": "أَبْغَضُ الرِّجَالِ إِلَى اللَّهِ الأَلَدُّ الْخَصِمُ",
+    "explanation": "Unnecessary arguments and quarrels lead to Allah’s displeasure."
+  },
+  {
+    "english": "Actions are judged by intentions.",
+    "urdu": "اعمال کا دار و مدار نیتوں پر ہے۔",
+    "arabic": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ",
+    "explanation": "The value of any deed depends on the sincerity of intention."
+  },
+  {
+    "english": "He who does not thank people does not thank Allah.",
+    "urdu": "جو لوگوں کا شکر ادا نہیں کرتا وہ اللہ کا شکر ادا نہیں کرتا۔",
+    "arabic": "مَنْ لَا يَشْكُرِ النَّاسَ لَا يَشْكُرِ اللَّهَ",
+    "explanation": "Gratitude towards people is part of gratitude towards Allah."
+  },
+  {
+    "english": "The best charity is that given when you are healthy and desiring wealth.",
+    "urdu": "سب سے بہترین صدقہ وہ ہے جو تم صحت مند اور مال کی خواہش رکھتے ہوئے دو۔",
+    "arabic": "أَفْضَلُ الصَّدَقَةِ أَنْ تَصَدَّقَ وَأَنْتَ صَحِيحٌ شَحِيحٌ",
+    "explanation": "True charity is when one gives during life, not when death is near."
+  },
+  {
+    "english": "The strong man is not the one who overcomes others by strength, but the one who controls himself in anger.",
+    "urdu": "طاقتور وہ نہیں جو لوگوں کو زیر کرے بلکہ طاقتور وہ ہے جو غصے میں اپنے آپ کو قابو میں رکھے۔",
+    "arabic": "لَيْسَ الشَّدِيدُ بِالصُّرْعَةِ، إِنَّمَا الشَّدِيدُ الَّذِي يَمْلِكُ نَفْسَهُ عِنْدَ الْغَضَبِ",
+    "explanation": "Real strength lies in self-control, not physical power."
+  },
+  {
+    "english": "The world is cursed and what is in it is cursed, except the remembrance of Allah and what follows it.",
+    "urdu": "دنیا لعنتی ہے اور اس کی ہر چیز لعنتی ہے سوائے اللہ کے ذکر اور اس کے تابع چیزوں کے۔",
+    "arabic": "أَلَا إِنَّ الدُّنْيَا مَلْعُونَةٌ، مَلْعُونٌ مَا فِيهَا، إِلَّا ذِكْرَ اللَّهِ وَمَا وَالَاهُ",
+    "explanation": "Only deeds connected to Allah bring eternal value."
+  },
+  {
+    "english": "There is no envy except in two cases: a man whom Allah has given wealth and he spends it righteously, and a man whom Allah has given wisdom and he judges with it and teaches it.",
+    "urdu": "حسد صرف دو چیزوں میں جائز ہے: ایک شخص جسے اللہ نے مال دیا اور وہ اسے درست طریقے سے خرچ کرتا ہے، دوسرا شخص جسے اللہ نے حکمت دی اور وہ اس کے مطابق فیصلہ کرتا ہے اور سکھاتا ہے۔",
+    "arabic": "لَا حَسَدَ إِلَّا فِي اثْنَتَيْنِ: رَجُلٌ آتَاهُ اللَّهُ مَالًا فَسَلَّطَهُ عَلَى هَلَكَتِهِ فِي الْحَقِّ، وَرَجُلٌ آتَاهُ اللَّهُ الْحِكْمَةَ فَهُوَ يَقْضِي بِهَا وَيُعَلِّمُهَا",
+    "explanation": "Jealousy is only permissible for righteous deeds and knowledge."
+  },
+  {
+    "english": "The best of you are those who learn the Qur'an and teach it.",
+    "urdu": "تم میں سب سے بہترین وہ ہیں جو قرآن سیکھتے اور سکھاتے ہیں۔",
+    "arabic": "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",
+    "explanation": "Learning and teaching the Qur'an is the most virtuous act."
+  },
+  {
+    "english": "None of you should truly believe until his desires follow what I have brought.",
+    "urdu": "تم میں سے کوئی شخص ایمان والا نہیں جب تک اس کی خواہش میری لائی ہوئی شریعت کے تابع نہ ہو جائے۔",
+    "arabic": "لَا يُؤْمِنُ أَحَدُكُمْ حَتَّى يَكُونَ هَوَاهُ تَبَعًا لِمَا جِئْتُ بِهِ",
+    "explanation": "True faith requires aligning personal desires with Islamic teachings."
+  },
+  {
+    "english": "Beware of injustice, for injustice will be darkness on the Day of Judgment.",
+    "urdu": "ظلم سے بچو کیونکہ ظلم قیامت کے دن اندھیرا بن جائے گا۔",
+    "arabic": "اتَّقُوا الظُّلْمَ فَإِنَّ الظُّلْمَ ظُلُمَاتٌ يَوْمَ الْقِيَامَةِ",
+    "explanation": "Oppression will lead to severe consequences in the Hereafter."
+  },
+  {
+    "english": "Modesty brings nothing but good.",
+    "urdu": "حیا صرف بھلائی لاتی ہے۔",
+    "arabic": "الْحَيَاءُ لَا يَأْتِي إِلَّا بِخَيْرٍ",
+    "explanation": "Modesty is a virtue that results in goodness and blessings."
+  }
+        ]
 
         function getRandomIndex() {
             return Math.floor(Math.random() * quotes.length);
@@ -867,6 +483,8 @@
             document.getElementById('arabic').textContent = q.arabic;
             document.getElementById('explanation').textContent = q.explanation;
         });
+        console.log(quotes);
+        console.log(quotes.length);
     </script>
 </body>
 
